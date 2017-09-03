@@ -17,6 +17,7 @@ public class PlayerAnimation : MonoBehaviour {
         {
             anim.Play("Player Idle");
         }
+
     }
 
     private void OnCollisionExit2D(Collision2D target)
@@ -34,6 +35,9 @@ public class PlayerAnimation : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        if (Player.walkingBack) {
+            anim.Play("Player Walk");
+        }
+
+    }
 }

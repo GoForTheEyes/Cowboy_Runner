@@ -11,3 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/Gameplay.unity
     guid: 4a213e8dbc998df4bae44f56be16529c
+  - enabled: 1
+    path: Assets/_Scenes/Leaderboard.unity
+    guid: c565a90b052f46a4c9d991a85695f2ee

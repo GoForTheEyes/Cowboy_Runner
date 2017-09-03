@@ -24,12 +24,13 @@ public class GameSparksTestUI : MonoBehaviour
 	private const int itemHeight = 30;
 	private const int itemWidth = 200;
 
-	private Boolean testing;
+#pragma warning disable 0169
+    private Boolean testing;
 	private Boolean working;
 	private Boolean result;
 	private int counter;
 	private int numTest;
-
+#pragma warning restore 0169
     public Texture cursor;
 
 #if (UNITY_PS4 || UNITY_XBOXONE) && !UNITY_EDITOR 

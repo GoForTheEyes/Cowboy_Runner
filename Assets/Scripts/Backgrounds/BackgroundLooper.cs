@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BackgroundLooper : MonoBehaviour {
 
-    public float speed = 0.1f;
+    private float speed = 0.1f;
     private Vector2 offset = Vector2.zero;
     private Material mat;
 
@@ -16,7 +16,17 @@ public class BackgroundLooper : MonoBehaviour {
 
     void Update()
     {
-        offset.x += speed * Time.deltaTime;
-        mat.SetTextureOffset("_MainTex", offset);
+        //move background slower if player is walking back
+        if (Player.walkingBack)
+        {
+            offset.x += speed/2 * Time.deltaTime;
+            mat.SetTextureOffset("_MainTex", offset);
+        }
+        else
+        {
+            offset.x += speed * Time.deltaTime;
+            mat.SetTextureOffset("_MainTex", offset);
+        }
+
     }
 }
